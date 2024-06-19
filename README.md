@@ -14,11 +14,11 @@ Currently, when a UW student wants to register for a course that is full, they h
 
 This was developed as our final project in the CSE 154 Web Programming class in the Spring quarter, 2024 taught by Tal Wolman. At the end of the quarter, we presented our project in front of 100+ students, TAs and instructors, and we were voted as the best project from over 50 teams. We are extremely grateful for the experience!
 
-## The security and development process (overcoming 2FA).
+## The security and development - 2FA
 
 The entire journey of this project had a lot of roadbumps in terms of security. We were trying to build a project to automatically swap courses between two students (without using any API)
 and our main goal throughout this project was to make this seamless. Our main goal was that we wanted the course swap to be automatically completed on MyPlan once a trade was matched.</br>
-In building this, we incorporated UW's 2 factor authentification (for security reasons) into our login process, and at the same time maintained browser state in order automatically swap courses
+In building this, we incorporated UW's 2 factor authentification (for security reasons) with Duo Mobile into our login process, and at the same time maintained browser state in order automatically swap courses
 later without prompting another Duo push.
 
 ## Next Steps
