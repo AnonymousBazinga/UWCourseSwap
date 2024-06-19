@@ -1,4 +1,4 @@
-# UW Course Swap
+# Course Nebula
 
 ## Introduction
 
