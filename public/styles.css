@@ -1,0 +1,99 @@
+:root {
+  --page-title-height: 10rem;
+  --default-button-opacity: 0.6;
+  --hover-button-opacity: 0.4;
+
+  --ui-primary-color: #FAA732;
+  --ui-light-primary-color: #fff2e0;
+
+  --ui-base-white: white;
+  --ui-dark-font-color: rgb(60, 60, 60);
+  --ui-light-font-color: rgb(255, 255, 255);
+
+  --primary-button-color: #ee9d2c;
+  --primary-button-hover-color: #f1b157;
+  --info-tag-color: #FFB957;
+  --table-head-color: #ffc472;
+  --li-hover-color: hsl(0, 0%, 98%);
+}
+
+.primary-button {
+  font-weight: bold;
+  background: var(--primary-button-color);
+  border: none;
+  color: var(--ui-light-font-color);
+}
+
+.primary-button:hover {
+  filter: opacity(var(--default-button-opacity));
+}
+
+.loading-spinner {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: var(--ui-dark-font-color);
+  animation: spin 1s ease-in-out infinite;
+  margin: 1rem auto;
+}
+
+.secondary-button {
+  font-weight: bold;
+  background: none;
+  border: 0.15rem solid var(--ui-primary-color);
+  color: var(--ui-primary-color);
+}
+
+.secondary-button:hover {
+  text-decoration: underline;
+}
+
+.invisible {
+  display: none;
+}
+
+#alert-panel {
+  padding: 1rem 4rem;
+  background-color: white;
+  max-width: 30rem;
+  border-radius: 1.5rem;
+  border: 0.15rem solid red;
+  box-shadow: rgba(0, 0, 0, 0.12) 0 0.1rem 0.2rem, rgba(0, 0, 0, 0.24) 0 0.1rem 0.2rem;
+  position: absolute;
+  top: 1.5rem;
+  left: 1rem;
+}
+
+.alert-panel-message {
+  width: 100%;
+  border: none;
+}
+
+#error-message {
+  color: red;
+  margin: 0;
+}
+
+@media (width <= 1920px) {
+  html {
+    font-size: 11px;
+  }
+}
+
+@keyframes pulse-section {
+  0% {
+    box-shadow: inset 400px 0px 80px -500px rgb(255, 188, 126);
+  }
+
+  100% {
+    box-shadow: inset 400px 0px 80px 400px rgba(255, 230, 185, 0);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

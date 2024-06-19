@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Trades</title>
+  <link rel="stylesheet" href="./mytrades.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  <script src="./mytrades.js" type="module"></script>
+</head>
+<body>
+  <section id="alert-panel" class="invisible">
+    <h2 id="error-message">Error: cannot get all trades</h2>
+  </section>
+  <section id="page-title">
+    <h1 class="uppercase">My trades</h1>
+  </section>
+  <section id="page-content">
+    <nav id="left-side-menu">
+      <button id="current-trade-button" class="active-tab">
+        <img src="./img/trade-icon.svg" alt="Trade Icon" class="nav-icon">
+        Current Trades
+      </button>
+      <button id="concluded-trade-button" class="normal-tab">
+        <img src="./img/history-icon.svg" alt="History Icon" class="nav-icon">
+        Concluded Trades
+      </button>
+      <a href="../home/home.html" class="bottom-button">
+        <img src="./img/home-icon.svg" alt="Home Icon" class="nav-icon">
+        Home
+      </a>
+    </nav>
+    <ul id="concluded-trade-list" class="invisible trades-list">
+    </ul>
+    <ul id="current-trade-list" class="trades-list flex">
+    </ul>
+  </section>
+</body>
+</html>

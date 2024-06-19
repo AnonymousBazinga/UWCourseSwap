@@ -1,0 +1,71 @@
+<!--
+Name: Oscar Shijie Song and Pranav Madhukar
+Date: Jun 3, 2024
+Section: CSE 154 AC
+TAs: Kathryn Koehler & Rasmus Makiniemi
+
+Layout the page with to have the main body empty for the d3 display and the top right section for
+search panel and navigation bar
+
+Icons from https://www.svgrepo.com/
+Font from Google Font
+D3 graph generating library from https://d3js.org/
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Course Nebula</title>
+  <link rel="stylesheet" href="./home.css">
+  <script src="./home.js" type="module"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7" type="module"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <ul id="alert-panel" class="invisible">
+  </ul>
+  <section id="top-right-panel">
+    <form id="course-search-container">
+      <img src="./img/search-icon.svg" alt="search-icon">
+      <input id="search-input" type="text" name="curriculum-abbreviation"
+      placeholder="Course Name E.g. Math124" required>
+    </form>
+    <section id="course-search-result-panel" class="invisible">
+      <header id="course-search-result-panel-header">
+        <img src="./img/list-icon.svg" alt="Layout switch" id="list-display-button" class="course-layout-switch-button">
+        <img src="./img/two-columns-icon.svg" alt="Layout switch" id="columns-display-button" class="course-layout-switch-button invisible">
+        <small><span>0</span> results found</small>
+        <img src="./img/close-button.svg" alt="close panel button" id="close-panel-button">
+      </header>
+      <section id="course-search-result-container">
+        <ul id="course-search-result-list" class="full-information">
+        </ul>
+      </section>
+    </section>
+    <img id="menu-icon" src="./img/menu-icon.svg" alt="menu-icon" title="Menu">
+    <section id="menu" class="invisible">
+      <a href="../mytrades/mytrades.html">
+        <img src="./img/trade-icon.svg" alt="Trades">
+        Trades
+      </a>
+      <a href="../cart/cart.html">
+        <img src="./img/cart-icon.svg" alt="Cart">
+        Cart
+      </a>
+      <hr>
+      <button id="d3-layout-switch-button">
+        <img src="./img/graph-icon.svg" alt="Graph Layout">
+        <span>Expanded</span>
+      </button>
+      <button id="logout-button">
+        <img src="./img/log-out-icon.svg" alt="Log Out">
+        Log Out
+      </button>
+    </section>
+    <section id="add-section-to-cart-area" class="invisible cart-section-light">
+      <img src="./img/cart-icon.svg" alt="plus icon">
+    </section>
+  </section>
+</body>
+</html>

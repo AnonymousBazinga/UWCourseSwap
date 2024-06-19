@@ -1,0 +1,54 @@
+<!--
+Name: Oscar Shijie Song and Pranav Madhukar
+Date: Jun 3, 2024
+Section: CSE 154 AC
+TAs: Kathryn Koehler & Rasmus Makiniemi
+
+Layout the page with two sections side by side (one for user's sections and one for user's shopping
+cart) and hidden panel for error. All information about the sections and interactions are handles
+by cart.js
+
+Icons from https://www.svgrepo.com/
+Font from Google Font
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Cart</title>
+  <link rel="stylesheet" href="./cart.css">
+  <script src="./cart.js" type="module"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <a href="../home/home.html" id="back-button">
+    <img src="./img/back-icon.svg" alt="back icon">
+    Back
+  </a>
+  <section id="alert-panel" class="invisible">
+    <h2 id="error-message">Error: cannot get all trades</h2>
+  </section>
+  <section id="course-switch-container">
+    <section id="my-sections">
+      <h1 class="uppercase">my sections</h1>
+      <section class="loading-spinner"></section>
+      <ul>
+      </ul>
+    </section>
+    <section id="cart">
+      <section>
+        <h1 class="uppercase">cart</h1>
+        <button id="clear-cart-button">clear</button>
+      </section>
+      <ul>
+      </ul>
+    </section>
+  </section>
+  <section id="button-container">
+    <button id="create-trade-button" class="primary-button">
+      Create Trade
+    </button>
+  </section>
+</body>
+</html>

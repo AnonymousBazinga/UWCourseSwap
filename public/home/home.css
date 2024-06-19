@@ -1,0 +1,443 @@
+/*
+ * Name: Oscar Shijie Song and Pranav Madhukar
+ * Date: Jun 3, 2024
+ * Section: CSE 154 AC
+ * TAs: Kathryn Koehler & Rasmus Makiniemi
+ *
+ * Styles the home page to have the main view for the D3 graph and top right for the search panel
+ * and navigation bars. Orange light themed web page.
+ */
+
+@import url("/styles.css");
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background: url("./img/grid.svg");
+  font-family: "Titillium Web", sans-serif;
+  color: var(--ui-dark-font-color);
+}
+
+hr {
+  border: none;
+  height: 0.1rem;
+  width: 100%;
+  background-color: hsl(0, 0%, 80%);
+  margin: 0.2em 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+th, td {
+  text-align: center;
+}
+
+th {
+  background-color: var(--table-head-color);
+  color: var(--ui-light-font-color);
+  padding: 0.2em 1.5em;
+  border-radius: 0.5em;
+}
+
+td {
+  background-color: var(--ui-base-white);
+  vertical-align: top;
+  padding: 0.2em 1.5em;
+  border-radius: 0.5em;
+}
+
+.flex {
+  display: flex;
+}
+
+#add-section-to-cart-area {
+  border-radius: 1.5rem;
+  grid-column: 2;
+  grid-row: 2;
+  width: 100%;
+  height: 100%;
+  border: 0.15rem dashed rgb(182, 182, 182);
+  box-shadow: rgba(99, 99, 99, 0.2) 0 0.1rem 0.5rem 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-section-darker {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.cart-section-light {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+#top-right-panel {
+  display: grid;
+  grid-template-columns: 55rem 6rem;
+  justify-items: center;
+  column-gap: 1rem;
+  row-gap: 1rem;
+  position: fixed;
+  right: 1rem;
+  top: 1.5rem;
+}
+
+#course-search-container {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.caret, .course-list-leaf {
+  display: flex;
+  align-items: center;
+  border-radius: 0.5rem;
+}
+
+.caret {
+  padding: 0.5rem 1rem;
+}
+
+.course-list-leaf {
+  padding: 0.5rem 1rem;
+}
+
+.caret:hover, .course-list-leaf:hover {
+  background-color: var(--li-hover-color);
+}
+
+.course-list-leaf:hover {
+  box-shadow: inset 1rem 0 0 0 var(--ui-primary-color);
+}
+
+.course-list-leaf:hover .section-letter {
+  background-image: url("./img/hand-icon.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: transparent;
+}
+
+.caret-down {
+  background-color: var(--ui-light-primary-color);
+}
+
+#course-search-result-panel {
+  grid-column: 1;
+  grid-row: 2;
+  width: 100%;
+  max-height: 60rem;
+  background-color: white;
+  border-radius: 1.5rem;
+  box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.12) 0 0.1rem 0.2rem, rgba(0, 0, 0, 0.24) 0 0.1rem 0.2rem;
+  font-size: 1.5rem;
+  padding: 2rem;
+  flex-direction: column;
+  user-select: none;
+}
+
+#search-input {
+  width: 100%;
+  height: 100%;
+  border-radius: 1.5rem;
+  outline: none;
+  border: 0.15rem solid #c3c3c3;
+  text-indent: 3rem;
+  font-size: 1rem;
+  padding: 0;
+  box-sizing: border-box;
+  color: rgb(70, 70, 70);
+}
+
+#close-panel-button {
+  filter: opacity(var(--default-button-opacity));
+  height: 1rem;
+}
+
+#close-panel-button:hover {
+  filter: opacity(var(--hover-button-opacity));
+}
+
+#course-search-result-panel-header {
+  width: 100%;
+  padding-bottom: 0.8rem;
+  border-bottom: 0.2rem solid hsl(0, 0%, 95%);
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.course-layout-switch-button {
+  justify-self: center;
+  height: 1em;
+  filter: opacity(var(--default-button-opacity));
+}
+
+.course-layout-switch-button:hover {
+  filter: opacity(var(--hover-button-opacity));
+}
+
+.lecture-info-section {
+  margin-left: auto;
+  font-size: 0.6em;
+}
+
+.section-type {
+  font-size: 1rem;
+  margin-left: 0.4rem;
+}
+
+.active {
+  display: block;
+}
+
+.section-letter {
+  height: 2em;
+  width: 2em;
+  border-radius: 1em;
+  color: white;
+  font-weight: bold;
+  background-color: var(--ui-primary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu {
+  width: 100%;
+  box-sizing: border-box;
+  grid-column: 2;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-radius: 1.5rem;
+  padding: 1rem 1rem;
+  gap: 1rem;
+  height: max-content;
+  box-shadow: rgba(0, 0, 0, 0.12) 0 0.1rem 0.2rem, rgba(0, 0, 0, 0.24) 0 0.1rem 0.2rem;
+}
+
+#course-search-result-container {
+  height: 100%;
+  position: relative;
+  overflow: scroll;
+}
+
+#course-search-result-list {
+  max-height: 60rem;
+  margin: 0;
+  padding: 0;
+  padding-right: 1em;
+}
+
+.two-grid-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 0.5rem;
+}
+
+.highlight-section {
+  animation-name: "pulse-section";
+  animation-duration: 2s;
+}
+
+#search-input:hover {
+  box-shadow: rgba(0, 0, 0, 0.12) 0 0.1rem 0.2rem, rgba(0, 0, 0, 0.24) 0 0.1rem 0.2rem;
+}
+
+.course-text-in-node {
+  font-size: 0.8rem;
+}
+
+.text-under-node {
+  fill: var(--ui-dark-font-color);
+}
+
+.section-text-in-node {
+  font-size: 1.2rem;
+}
+
+#my-courses {
+  display: flex;
+}
+
+.caret:before, .course-list-leaf:before {
+  content: "";
+  display: inline-block;
+  margin-right: 0.5em;
+  height: 1.2em;
+  width: 1.2em;
+  background-size: cover;
+  background-position: center;
+}
+
+.caret:before {
+  filter: opacity(var(--default-button-opacity));
+  background-image: url("./img/list-arrow-icon.svg");
+}
+
+.caret-down:before {
+  transform: rotate(90deg);
+}
+
+#menu button, #menu a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  width: 100%;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  border-radius: 1rem;
+  color: hsl(0, 0%, 20%);
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 400;
+}
+
+#menu button {
+  background-color: white;
+}
+
+#menu button:hover, #menu a:hover {
+  background-color: var(--ui-light-primary-color);
+}
+
+#menu img {
+  filter: opacity(var(--default-button-opacity));
+  height: 3rem;
+}
+
+#top-right-panel > img {
+  filter: opacity(var(--default-button-opacity));
+  width: 3rem;
+}
+
+#top-right-panel > img:hover {
+  filter: opacity(var(--hover-button-opacity));
+}
+
+#course-search-container > img {
+  position: absolute;
+  height: 1.5rem;
+  left: 0.75rem;
+}
+
+#course-search-result-list ul {
+  border-left: 0.1rem solid hsl(0, 0%, 70%);
+  padding-left: 1.5em;
+}
+
+#course-search-result-list li {
+  border-radius: 0.4em;
+}
+
+#course-search-result-panel h1,
+#course-search-result-panel h2,
+#course-search-result-panel h3,
+#course-search-result-panel h4 {
+  color: var(--ui-dark-font-color);
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+#course-search-result-panel > h1 {
+  margin: 0.2em 1em;
+}
+
+#course-search-result-panel h1 {
+  font-size: 1.5em;
+}
+
+#course-search-result-panel h2 {
+  font-size: 1.3em;
+}
+
+#course-search-result-panel h3 {
+  font-size: 1.1em;
+}
+
+#course-search-result-panel h4 {
+  font-size: 1em;
+}
+
+.nested p {
+  font-size: 1em;
+  margin: 0.2em 0;
+}
+
+.dropping text, .wanted text, .dropping-wanted text {
+  font-weight: bold;
+  user-select: none;
+  text-anchor: middle;
+}
+
+.dropping circle {
+  fill: var(--ui-primary-color);
+}
+
+.dropping .course-text-in-node, .dropping .section-text-in-node {
+  fill: var(--ui-light-font-color);
+}
+
+.wanted circle {
+  stroke: var(--ui-primary-color);
+  stroke-width: 0.15rem;
+  stroke-dasharray: 5, 5;
+  fill: var(--ui-base-white);
+}
+
+.wanted .course-text-in-node, .wanted .section-text-in-node {
+  fill: var(--ui-primary-color);
+}
+
+.dropping-wanted circle {
+  fill: var(--ui-light-primary-color);
+  stroke: var(--ui-primary-color);
+  stroke-width: 0.15rem;
+}
+
+.dropping-wanted text {
+  fill: var(--ui-primary-color);
+}
+
+#my-courses > span {
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  background-color: #ffc472;
+  border-radius: 1rem;
+  margin: 0 0.2rem;
+}
+
+#add-section-to-cart-area img {
+  height: 3rem;
+  filter: opacity(var(--hover-button-opacity));
+}
+
+.caret small, .course-list-leaf h4 {
+  margin-left: auto;
+}
+
+#course-search-result-panel-header > small {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.section-letter p {
+  margin: 0;
+}
+
+.section-letter p:first-child {
+  font-size: 0.5rem;
+}
+
+.section-letter p:nth-child(2) {
+  font-size: 1rem;
+}

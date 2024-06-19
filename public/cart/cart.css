@@ -1,0 +1,193 @@
+/*
+ * Name: Oscar Shijie Song and Pranav Madhukar
+ * Date: Jun 3, 2024
+ * Section: CSE 154 AC
+ * TAs: Kathryn Koehler & Rasmus Makiniemi
+ *
+ * Styles the cart page into two sections and display on each part the sections of courses in a list
+ * for the registered user sections and the user's shopping cart sections. Orange light theme color
+ * scheme
+ */
+
+@import url("/styles.css");
+
+body {
+  padding-top: 8rem;
+  margin: auto;
+  max-width: 100rem;
+  overflow: hidden;
+  font-family: "Titillium Web", sans-serif;
+  color: var(--ui-dark-font-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+}
+
+h3 {
+  margin: 0.2rem 0;
+}
+
+ul {
+  height: 45rem;
+  list-style-type: none;
+  overflow: scroll;
+  padding: 0 1rem 0 0;
+  margin: 0;
+}
+
+th, td {
+  text-align: center;
+}
+
+th {
+  background-color: var(--table-head-color);
+  color: var(--ui-light-font-color);
+  padding: 0.2em 1.5em;
+  border-radius: 0.5em;
+}
+
+td {
+  background-color: var(--ui-base-white);
+  vertical-align: top;
+  padding: 0.2em 1.5em;
+  border-radius: 0.5em;
+}
+
+button {
+  font-family: "Titillium Web", sans-serif;
+}
+
+#course-switch-container {
+  font-size: 1.5rem;
+  width: 100%;
+  height: max-content;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 4rem;
+  padding: 2rem 0rem;
+  box-sizing: border-box;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+#button-container {
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.selected {
+  box-shadow: inset 1rem 0px 0px 0px var(--ui-primary-color), rgba(0, 0, 0, 0.1) 0px 1px 3px 0px;
+}
+
+#back-button {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: var(--ui-dark-font-color);
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 0.2em;
+}
+
+#back-button:hover {
+  text-decoration: underline;
+}
+
+.course-list-leaf {
+  display: flex;
+  align-items: center;
+  border-radius: 0.5rem;
+  padding: 1rem 1rem;
+  border: 0.1rem solid rgb(215, 215, 215);
+  margin: 0.5rem 0;
+}
+
+.course-list-leaf:hover {
+  background-color: var(--li-hover-color);
+}
+
+.course-list-leaf:before {
+  content: "";
+  display: inline-block;
+  margin-right: 0.5em;
+  height: 1.2em;
+  width: 1.2em;
+  background-size: cover;
+  background-position: center;
+}
+
+.lecture-info-section {
+  margin-left: auto;
+  font-size: 0.6em;
+}
+
+.section-letter {
+  height: 2em;
+  width: 2em;
+  border-radius: 1em;
+  color: white;
+  font-weight: bold;
+  background-color: var(--ui-primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-type {
+  font-size: 1rem;
+  margin-left: 0.4rem;
+}
+
+.course-list-leaf h4 {
+  margin-left: auto;
+}
+
+#back-button > img {
+  filter: opacity(var(--default-button-opacity));
+  height: 1em;
+}
+
+#cart > section {
+  height: max-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#cart > section > button {
+  border: none;
+  margin-right: 2rem;
+  font-size: 1.4rem;
+  background-color: transparent;
+}
+
+#cart > section > button:hover {
+  color: rgb(247, 85, 85);
+  text-decoration: underline;
+}
+
+#course-switch-container h1 {
+  margin: 1rem 2rem;
+  font-size: 1.5em;
+}
+
+#button-container button {
+  font-size: 1.5rem;
+  padding: 0.5rem 3rem;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#my-sections {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

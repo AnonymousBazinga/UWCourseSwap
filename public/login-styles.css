@@ -1,0 +1,91 @@
+/*
+ * Name: Oscar Shijie Song and Pranav Madhukar
+ * Date: Jun 3, 2024
+ * Section: CSE 154 AC
+ * TAs: Kathryn Koehler & Rasmus Makiniemi
+ *
+ * Style sheet to split Login page into two section with the login form on the right. Orange light
+ * color themed
+ */
+
+@import url("/styles.css");
+
+body {
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  overflow: none;
+  font-family: "Titillium Web", sans-serif;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--ui-base-white);
+  padding: 3rem;
+  border-radius: 1rem;
+  gap: 0.4rem;
+  user-select: none;
+}
+
+label {
+  margin-left: 0.5rem;
+  font-size: 1.5rem;
+}
+
+form h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.user-input {
+  border: 0.1rem solid orange;
+  border-radius: 1.2rem;
+  width: 20rem;
+  padding: 0.5rem 0;
+  text-indent: 2rem;
+  font-size: 1.2rem;
+  outline: none;
+}
+
+#background {
+  display: flex;
+  align-items: center;
+  padding: 0 6rem;
+  justify-content: right;
+}
+
+#background h1 {
+  font-size: 10rem;
+}
+
+#two {
+  padding: 8%;
+  background-color: var(--ui-primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#submit-btn {
+  font-size: 1rem;
+  margin-top: 1rem;
+  border-radius: 1rem;
+  width: 100%;
+  height: 3rem;
+  border: 0;
+  background-color: var(--primary-button-color);
+  font-weight: bold;
+  color: var(--ui-base-white);
+}
+
+#submit-btn:hover {
+  background-color: var(--primary-button-hover-color);
+}
+
+#remember-me {
+  height: 1rem;
+  margin: 0;
+}

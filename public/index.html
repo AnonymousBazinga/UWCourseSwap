@@ -1,0 +1,43 @@
+<!--
+Name: Oscar Shijie Song and Pranav Madhukar
+Date: Jun 3, 2024
+Section: CSE 154 AC
+TAs: Kathryn Koehler & Rasmus Makiniemi
+
+Layout the login page into two section with the login form on the right
+
+Icons from https://www.svgrepo.com/
+Font from Google Font
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./login-styles.css">
+  <script src="./login.js"></script>
+</head>
+<body>
+  <section id="background">
+    <h1> Course <br> Nebula </h1>
+  </section>
+  <section id="two">
+    <form id="login-form">
+      <h1>LOGIN</h1>
+      <label for="username">UW NetID</label>
+      <input name="username" id="username" class="user-input" type="text">
+      <label for="password">Password</label>
+      <input name="password" id="password" class="user-input" type="password">
+      <section class="loading-spinner invisible"></section>
+      <button id="submit-btn">Login</button>
+      <section>
+        <input type="checkbox" id="remember-me" name="remember-me" value="Remember Me">
+        <label for="remember-me">Remember Me</label>
+      </section>
+    </form>
+  </section>
+</body>
+</html>

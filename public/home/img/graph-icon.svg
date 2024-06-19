@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+
+<svg
+   width="800px"
+   height="800px"
+   viewBox="0 0 48 48"
+   version="1.1"
+   id="svg3"
+   sodipodi:docname="graph-icon.svg"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs3" />
+  <sodipodi:namedview
+     id="namedview3"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.46625"
+     inkscape:cx="400"
+     inkscape:cy="400"
+     inkscape:window-width="2560"
+     inkscape:window-height="1371"
+     inkscape:window-x="0"
+     inkscape:window-y="1472"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg3" />
+  <title
+     id="title1">network-platform</title>
+  <g
+     id="Layer_2"
+     data-name="Layer 2"
+     transform="matrix(-1,0,0,1,48,0)">
+    <g
+       id="invisible_box"
+       data-name="invisible box">
+      <rect
+         width="48"
+         height="48"
+         fill="none"
+         id="rect1"
+         x="0"
+         y="0" />
+      <rect
+         width="48"
+         height="48"
+         fill="none"
+         id="rect2"
+         x="0"
+         y="0" />
+      <rect
+         width="48"
+         height="48"
+         fill="none"
+         id="rect3"
+         x="0"
+         y="0" />
+    </g>
+    <g
+       id="icons_Q2"
+       data-name="icons Q2">
+      <path
+         d="m 40,18 a 6.2,6.2 0 0 0 -5.7,4 h -8.5 a 9.9,9.9 0 0 0 -1.5,-3.3 l 3.5,-4.1 A 7.8,7.8 0 0 0 30,15 6,6 0 1 0 24,9 a 6.1,6.1 0 0 0 0.8,3 l -3.6,4.1 A 8.5,8.5 0 0 0 17,15 l -1.7,0.2 -1.2,-2.8 A 6,6 0 1 0 10,14 h 0.4 l 1.3,2.8 a 8.9,8.9 0 0 0 0,14.4 L 10.4,34 H 10 a 6,6 0 1 0 4.1,1.6 L 15.3,32.8 17,33 a 8.5,8.5 0 0 0 4.2,-1.1 l 3.6,4.1 a 6.1,6.1 0 0 0 -0.8,3 6,6 0 1 0 6,-6 7.8,7.8 0 0 0 -2.2,0.4 L 24.3,29.3 A 9.9,9.9 0 0 0 25.8,26 h 8.5 A 6.2,6.2 0 0 0 40,30 6,6 0 0 0 40,18 Z M 8,8 a 2,2 0 1 1 2,2 2,2 0 0 1 -2,-2 z m 2,34 a 2,2 0 1 1 2,-2 2,2 0 0 1 -2,2 z M 30,7 A 2,2 0 1 1 28,9 2,2 0 0 1 30,7 Z M 12,24 a 5,5 0 1 1 5,5 5,5 0 0 1 -5,-5 z m 20,15 a 2,2 0 1 1 -2,-2 2,2 0 0 1 2,2 z m 8,-13 a 2,2 0 1 1 2,-2 2,2 0 0 1 -2,2 z"
+         id="path3" />
+    </g>
+  </g>
+</svg>
